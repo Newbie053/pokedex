@@ -141,8 +141,12 @@ const [loadingSkill, setLoadingSkill] = useState(false)
                     )
                 })}
             </div>
-            <img className="default-img" src={'/pokemon/'+ getFullPokedexNumber(selectedPokemon)+'.png'} 
-            alt={`${name}-large-img`} />
+<img
+  className="default-img"
+  src={`${import.meta.env.BASE_URL}pokemon/${getFullPokedexNumber(selectedPokemon)}.png`}
+  alt={`${name}-large-img`}
+/>
+
             <div className="img-container">
                 {imgList.map((spriteUrl,spriteIndex)=>{
                     const imgUrl = sprites[spriteUrl]
